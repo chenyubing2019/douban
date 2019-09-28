@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>文件下载</title>
+        <style>
+            a.download_file{
+                display:block;
+                margin-top:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>文件下载</h1>
+        <hr>
+        {% for f in file_names %}
+        <a href="/download/{{ f }}" class="download_file">{{ f }}</a>
+        {% endfor %}
+    </body>
+</html>
