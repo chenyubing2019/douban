@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offer招聘</title>
+</head>
+<body>
+<h1>欢迎~{{ person.name }}</h1>
+{% if person.priv == "1" %}
+  <h1>个人</h1>
+{% endif %}
+{% if person.priv == "2" %}
+  <h1>企业</h1>
+{% endif %}
+</body>
+</html>
