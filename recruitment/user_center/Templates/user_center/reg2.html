@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>注册</title>
+        {% load static %}
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="{% static 'user_center/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'user_center/font-awesome/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'user_center/css/form-elements.css' %}">
+        <link rel="stylesheet" href="{% static 'user_center/css/style.css' %}">
+        <link rel="shortcut icon" href="{% static 'user_center/ico/favicon.png' %}">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'user_center/ico/apple-touch-icon-144-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'user_center/ico/apple-touch-icon-114-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'user_center/ico/apple-touch-icon-72-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static 'user_center/ico/apple-touch-icon-57-precomposed.png' %}">
+
+        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script src="{% static 'user_center/js/check_passw.js' %}"></script>
+    </head>
+    
+    <body background="{% static 'user_center/img/backgrounds/1.jpg' %}" style="background-attachment: fixed">
+        <!-- Top content -->
+        
+        <div class="top-content">
+        	
+            <div class="inner-bg" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                                <div>{{phone}}</div>
+                            <h1>欢迎注册<strong>Offer招聘</strong></h1>
+                            <div class="description">
+                            	<p>曾梦想仗剑走天涯，看一看世界的繁华~</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>欢迎注册Offer招聘</h3>
+                            		<p>让梦想扬帆起航！</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-key"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="" method="post" class="login-form">
+                                        {% csrf_token %}
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-password1">password1</label>
+			                        	<input type="text" name="form-password1" placeholder="新密码..." class="form-password1 form-control" id="form-password1">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password2">password2</label>
+			                        	<input type="password" name="form-password2" placeholder="再次输入密码..." class="form-password2 form-control" id="form-password2">
+			                        </div>
+                                    <button type="submit" class="btn">注册</button>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 social-login">
+                        	<h3>...or login with:</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
+	                        		<i class="fa fa-twitter"></i> Twitter
+	                        	</a>
+	                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+	                        		<i class="fa fa-google-plus"></i> Google Plus
+	                        	</a>
+                        	</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+       
+        <!-- Javascript -->
+        <script src="{% static 'user_center/js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'user_center/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'user_center/js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'user_center/js/scripts.js' %}"></script>
+
+    </body>
+
+</html>
