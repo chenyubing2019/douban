@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>豆瓣</title>
+        <style>
+            #span1{
+                color :#ffb23b;
+            }
+            #a{
+                color:#3377aa;
+                text-decoration:none;
+            }
+            #b{
+                color:#666666;
+            }
+            #div1{
+                width: 70%;
+                float : left;
+            }
+            #div2{
+                float:left;
+            }
+            #div3{
+                float:left;
+                padding:25px;
+            }
+            #p{
+                line_height:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+        <h2>豆瓣新片榜</h2>
+        <form>
+            <hr>
+            {% for i in nuw %}
+            <table cellspacing="5">
+                <tr><th></th><th></th></tr>
+                <tr><td rowspan="3" valign="top"><a href="{{ i[4] }}" target="_blank" ><img src="{{ i[3] }}" width="85"></a>&nbsp&nbsp&nbsp</td><td><a href="{{ i[4] }}" target="_blank" id="a">{{ i[0] }}/{{ i[1] }}</a></td></tr>
+                <tr><td id="b">{{ i[2] }}</td></tr>
+                <tr><td><span id="span1">{{ i[5] }}</span>分 <span id="b">{{ i[6] }}</span></td></tr>
+            </table>
+            <hr>
+            {% endfor %}
+        </form>
+        </div>
+        <div id="div3"></div>
+        <div id="div2">
+            <h3>一周口碑榜</h3> <p id="p">{{ c3 }}</p>
+        <form>
+            {% for j in nuw2 %}
+            <table>
+                <tr><th></th></tr>
+                <tr><tb>{{ j[2] }}.<a href="{{ j[1] }}" id="a" target="_blank">{{ j[0] }}</a></tb></tr>
+            </table>
+            {% endfor %}
+        </form>
+        </div>
+    </body>
+</html>
